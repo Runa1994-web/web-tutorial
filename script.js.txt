@@ -1,0 +1,15 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let btn = document.getElementById("check-answer");
+    btn.addEventListener("click", function() {
+        let answer = document.getElementById("answer").value;
+        let result = document.getElementById("result");
+
+        if (answer.toLowerCase() === "гимнастика") {
+            result.textContent = "Правильно!";
+            result.style.color = "green";
+        } else {
+            result.textContent = "Неправильно! Попробуйте снова.";
+            result.style.color = "red";
+        }
+    });
+});
